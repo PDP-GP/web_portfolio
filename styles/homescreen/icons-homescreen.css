@@ -1,0 +1,41 @@
+.icons-blue-homescreen-greed{
+    display: grid;
+    grid-template-columns: 125px 125px 1fr 125px;
+    margin-top: 1%;
+    margin-left: 40px;
+    margin-right: 40px;
+    column-gap: 50px;  
+    
+}
+
+
+.empty-place{
+    min-width: 420px;
+}
+
+
+.icon-png-scarlet-ring, .icon-png{
+    text-align: center;
+}
+
+.icon-png{
+    margin-bottom: 10%;
+    
+    
+}
+
+.just-icon{
+    margin-top: 15%;
+    border-width: 1px;
+    display: inline-block;
+    
+
+}
+.text-under-icon{
+    display: inline-block;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    text-align: center;
+    
+}
+
