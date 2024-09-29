@@ -95,14 +95,14 @@
     width: 36px;
     height: 31px;
     /* background-color: white; */
-    background-image: url(/photos/popup-img/close-button.png);
+    background-image: url('../../photos/popup-img/close-button.png');
     
     border: none;
 }
 
 .close-button-button-only:hover{
     cursor: pointer;
-    background-image: url(/photos/popup-img/close-button-hover.png);
+    background-image: url('../../photos/popup-img/close-button-hover.png');
 }
 
 /* ----------------------------------------------------------- */
