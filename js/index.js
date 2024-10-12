@@ -9,11 +9,11 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(updateTime, 60000);
 });
 
-document.getElementById("open-modal-btn").addEventListener("click",function() {
+document.getElementById("modal_window_button-open").addEventListener("click",function() {
     document.getElementById("photo-modal").classList.add("open")
 })
 
-// при клике на кнопку с id open-modal-btn находится модальное окно с id photo-modal и при клике показывается
+// при клике на кнопку с id modal_window_button-open находится модальное окно с id photo-modal и при клике показывается
 
 document.getElementById("close-photo-modal-btn").addEventListener("click",function() {
     document.getElementById("photo-modal").classList.remove("open")
@@ -39,16 +39,16 @@ document.getElementById("open-gallery-maya").addEventListener("click",function()
 document.getElementById("open-razrab6-modal-btn").addEventListener("click",function() {
     window.open('gallery-menu.html?tab=photos-grid-olesya', "_self");
 })
-document.getElementById("open-razrab-modal-btn").addEventListener("click",function() {
+document.getElementById("open-gallery-nastya").addEventListener("click",function() {
     window.open('gallery-menu.html?tab=photos-grid-nastya', "_self");
 })
 
 
 
-document.getElementById("open-modal-profile-btn").addEventListener("click",function() {
+document.getElementById("open-modal-profile_btn").addEventListener("click",function() {
     document.getElementById("profile-modal").classList.add("open")
 })
-document.getElementById("close-profile-modal-btn").addEventListener("click",function() {
+document.getElementById("close-profile-modal_button").addEventListener("click",function() {
     document.getElementById("profile-modal").classList.remove("open")
 })
 
@@ -70,7 +70,7 @@ document.getElementById("close-mail-btn").addEventListener("click",function() {
 })
 
 
-// document.getElementById("open-razrab-modal-btn").addEventListener("click",function() {
+// document.getElementById("open-gallery-nastya").addEventListener("click",function() {
 //     document.getElementById("razrab-modal").classList.add("open")
 // })
 // document.getElementById("close-razrab-modal-btn").addEventListener("click",function() {

@@ -14,17 +14,17 @@
 } */
 
 
-.icon-png-scarlet-ring, .icon-png{
+/* .icon-png-scarlet-ring, .icon{
     text-align: center;
-}
+} */
 
-.icon-png{
+.icon{
     margin-bottom: 10%;
     
     
 }
 
-.just-icon{
+.icon-div{
     margin-top: 15%;
     border-width: 1px;
     display: inline-block;

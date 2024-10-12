@@ -6,14 +6,13 @@
     <link rel="stylesheet" href="styles/homescreen/other-homescreen.css">
     <link rel="stylesheet" href="styles/homescreen/popups.css">
     <link rel="stylesheet" href="styles/homescreen/gallery.css">
+    <link rel="stylesheet" href="styles/mail.css">
     <style>
         @font-face {
             font-family: "pixel-font";
             src: url(fonts/W95FA.otf) format('opentype');
         }
     </style>
-
-
 </head>
 
 <body>
@@ -22,38 +21,27 @@
     <div class="icons-blue-homescreen-greed">
 
         <!-- первый столбец иконок -->
-        <div class="left-icons">
+        <div>
 
 
             <!-- иконка на рабочем столе 1-->
-            <button class="btn7" id="open-modal-profile-btn">
-                <div class="icon-png">
+            <button class="modal-window-button" id="open-modal-profile_btn">
+                <div class="icon">
 
-                    <div class="just-icon">
+                    <div class="icon-div">
                         <img class="icon-pic" src="photos/icons-homescreen/profile-icon-2.png" alt="profile icon">
                     </div>
-
                     <div class="text-under-icon">
                         <p>profile.png</p>
-
                     </div>
                 </div>
             </button>
 
-
-
-
-
-
-
-
-
-
             <!-- иконка на рабочем столе 2-->
-            <button class="btn7" id="open-razrab-modal-btn" data-tab="photos-grid-nastya">
-                <div class="icon-png">
+            <button class="modal-window-button" id="open-gallery-nastya" data-tab="photos-grid-nastya">
+                <div class="icon">
 
-                    <div class="just-icon">
+                    <div class="icon-div">
                         <img class="icon-pic" src="photos/icons-homescreen/nastyas-art-icon-2.png"
                             alt="Floder with stars">
                     </div>
@@ -64,12 +52,11 @@
                 </div>
             </button>
 
-
             <!-- иконка на рабочем столе 3-->
-            <button class="btn7" id="open-badminton">
-                <div class="icon-png">
+            <button class="modal-window-button" id="open-badminton">
+                <div class="icon">
 
-                    <div class="just-icon">
+                    <div class="icon-div">
                         <img class="icon-pic" src="photos/icons-homescreen/sky-badm-icon-2.png" alt="shuttlecock ">
                     </div>
 
@@ -80,10 +67,10 @@
             </button>
 
             <!-- иконка на рабочем столе 4-->
-            <button class="btn7" id="open-scarlet-ring">
-                <div class="icon-png-scarlet-ring">
+            <button class="modal-window-button" id="open-scarlet-ring">
+                <div class="icon">
 
-                    <div class="just-icon">
+                    <div class="icon-div">
                         <img class="icon-pic" src="photos/icons-homescreen/scarlet-ring-icon-2.png" alt="handprint">
                     </div>
 
@@ -94,15 +81,13 @@
             </button>
         </div>
 
-
         <!-- второй столбец иконок -->
-        <div class="middle-icons">
+        <div>
             <!-- иконка на рабочем столе 5-->
+            <button class="modal-window-button" id="open-gallery-maya" data-tab="photos-grid-maya">
+                <div class="icon">
 
-            <button class="btn7" id="open-gallery-maya" data-tab="photos-grid-maya">
-                <div class="icon-png">
-
-                    <div class="just-icon">
+                    <div class="icon-div">
                         <img class="icon-pic" src="photos/icons-homescreen/maya-icon-2.png" alt="maya icon">
                     </div>
 
@@ -113,10 +98,10 @@
             </button>
 
             <!-- иконка на рабочем столе 6-->
-            <button id="open-razrab6-modal-btn" class="btn7" data-tab="photos-grid-maya">
-                <div class="icon-png">
+            <button id="open-razrab6-modal-btn" class="modal-window-button" data-tab="photos-grid-maya">
+                <div class="icon">
 
-                    <div class="just-icon">
+                    <div class="icon-div">
                         <img class="icon-pic" src="photos/icons-homescreen/olesyas-art-icon-2.png"
                             alt="folder with cupcake">
                     </div>
@@ -127,19 +112,15 @@
                 </div>
             </button>
         </div>
-        <div class="empty-place"></div>
-
-
-
-
+        <div></div> <!-- пустое мето -->
 
         <!-- третий столбец иконок -->
-        <div class="right-icons">
-            <button id="open-modal-btn" class="btn7">
+        <div>
+            <button id="modal_window_button-open" class="modal-window-button">
                 <!-- иконка на рабочем столе 7-->
-                <div class="icon-png">
+                <div class="icon">
 
-                    <div class="just-icon">
+                    <div class="icon-div">
                         <img class="icon-pic" src="photos/icons-homescreen/photo-icon-2.png" alt="paper">
                     </div>
 
@@ -216,16 +197,16 @@
     <!-- модальное окно 7 -->
     <div class="modal" id="photo-modal">
         <div class="modal-box"> <!-- модальноеокно-->
-            <div class="popup7">
-                <div class="header-popup7">
-                    <div class="popup7-logo">
+            <div class="popup">
+                <div class="header-popup">
+                    <div class="popup-logo">
                         <img src="photos/popup-img/photo-logo.png" alt="our photo" screet>
                     </div>
-                    <div class="popup7-text">
+                    <div class="popup-text">
                         <p class="window-name-text">photo-Paint</p>
                     </div>
-                    <div class="popup7-close-button">
-                        <button class="close-button-button-only" id="close-photo-modal-btn">
+                    <div class="popup-close-button">
+                        <button class="close-button-image" id="close-photo-modal-btn">
                             <img src="photos/popup-img/close-button.png" style="opacity: 0;">
                         </button>
                     </div>
@@ -240,7 +221,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="img7">
+                <div class="popup-image">
                     <img src="photos/popup-img/photo-img-550-short.png" alt="our photo" srcset="
                 photos/popup-img/photo-img-380-short.png 380w,
                 photos/popup-img/photo-img-550-short.png 550w
@@ -257,17 +238,17 @@
     <!-- модальное окно 1 -->
 
     <div class="modal" id="profile-modal">
-        <div class="modal-box"> 
-            <div class="popup7">
-                <div class="header-popup7">
-                    <div class="popup7-logo">
+        <div class="modal-box">
+            <div class="popup">
+                <div class="header-popup">
+                    <div class="popup-logo">
                         <img src="photos/popup-img/profile-logo.png" alt="profile logo">
                     </div>
-                    <div class="popup7-text">
+                    <div class="popup-text">
                         <p class="window-name-text">profile.png</p>
                     </div>
-                    <div class="popup7-close-button">
-                        <button class="close-button-button-only" id="close-profile-modal-btn">
+                    <div class="popup-close-button">
+                        <button class="close-button-image" id="close-profile-modal_button">
                             <img src="photos/popup-img/close-button.png" style="opacity: 0;" alt="close button">
                         </button>
                     </div>
@@ -282,7 +263,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="img7">
+                <div class="popup-image">
                     <img src="photos/popup-img/profile-photo-img-629-short.png"
                         alt="Nastya's and Olesya's characteristics" srcset="
                 photos/popup-img/profile-photo-img-475-short.png 475w,
@@ -301,16 +282,16 @@
     <!-- модальное окно разраб -->
     <!-- <div class="modal" id="razrab-modal">
         <div class="modal-box">
-            <div class="popup7">
-                <div class="header-popup7">
-                    <div class="popup7-logo">
+            <div class="popup">
+                <div class="header-popup">
+                    <div class="popup-logo">
                         <img src="photos/popup-img/nastyas-art-logo.png" alt="nastya's art logo">
                     </div>
-                    <div class="popup7-text">
+                    <div class="popup-text">
                         <p class="window-name-text">Nastya's art</p>
                     </div>
-                    <div class="popup7-close-button">
-                        <button class="close-button-button-only" id="close-razrab-modal-btn">
+                    <div class="popup-close-button">
+                        <button class="close-button-image" id="close-razrab-modal-btn">
                             <img src="photos/popup-img/close-button.png" style="opacity: 0;" alt="close button">
                         </button>
                     </div>
@@ -339,64 +320,81 @@
 
 
 
-    <!-- модальное окно6 разраб -->
-    <!-- <div class="modal" id="razrab6-modal">
-        <div class="modal-box">
-             <div class="popup7">
-                <div class="header-popup7">
-                    <div class="popup7-logo">
-                        <img src="photos/popup-img/olesyas-art-logo.png" alt="olesya's art logo">
-                    </div>
-                    <div class="popup7-text">
-                        <p class="window-name-text">Olesya's art</p>
-                    </div>
-                    <div class="popup7-close-button">
-                        <button class="close-button-button-only" id="close-razrab6-modal-btn">
-                            <img src="photos/popup-img/close-button.png" style="opacity: 0;" alt="close button">
-                        </button>
-                    </div>
-
-                </div>
-
-                <div class="img7">
-                    <p class="razrabotka-text">This app is currently in development. Please, check up later</p>
-
-                </div>
-            </div>
-
-        </div>
-    </div> --> 
 
 
 
 
 
 
-<!-- модальное окно почта -->
+    <!-- модальное окно почта -->
     <div class="modal" id="mail-modal">
         <div class="modal-box"> <!-- модальноеокно-->
-            <div class="popup7">
-                <div class="header-popup7">
-                    <div class="popup7-logo">
+            <div class="popup">
+                <div class="header-popup">
+                    <div class="popup-logo">
                         <img src="photos/popup-img/mail-logo.png" alt="our photo" screet>
                     </div>
-                    <div class="popup7-text">
+                    <div class="popup-text">
                         <p class="window-name-text">mail.exe</p>
                     </div>
-                    <div class="popup7-close-button">
-                        <button class="close-button-button-only" id="close-mail-btn">
+                    <div class="popup-close-button">
+                        <button class="close-button-image" id="close-mail-btn">
                             <img src="photos/popup-img/close-button.png" style="opacity: 0;">
                         </button>
                     </div>
 
                 </div>
-                    
-                <div class="whole-mail">
-                    <div class="to-mail"></div>
-                    <div class="subject-mail"></div>
-                    <div class="text-mail"></div>
+
+                <div class="separator white-separator"></div>
+                <div class="to-field">
+                    <div class="to-text">To:</div>
+                    <div class="dropdown">
+                        <div class="dropdown-select">Select</div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-item" data-email="ragozina2003@gmail.com">Nastya</div>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-item" data-email="olesyalenartovich@gmail.com">Olesya</div>
+                    </div>
                 </div>
-                
+                <div class="separator"></div>
+                <form id="emailForm" class="form-container" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" id="accessKey" value="c424e5cf-854f-4a17-a08b-1f0aaa45020d">
+
+                    <input type="hidden" name="email" id="recipientEmail">
+
+                    <div class="subject-field">
+                        <input type="text" name="subject" class="subject-input" placeholder="Subject" required>
+                    </div>
+
+                    <div class="message-field">
+                        <textarea class="message-input" name="mail" placeholder="Write a text..." required></textarea>
+                    </div>
+
+                    <input type="image" src="photos/popup-img/send1.png" alt="Отправить" class="send-button" id="sendButton" />
+                </form>
+
+                <script>
+                    const dropdownItems = document.querySelectorAll('.dropdown-item');
+                    const dropdownSelect = document.querySelector('.dropdown-select');
+                    const recipientEmailInput = document.getElementById('recipientEmail');
+                    const accessKeyInput = document.getElementById('accessKey');
+
+                    dropdownItems.forEach(item => {
+                        item.addEventListener('click', function () {
+                            const email = this.getAttribute('data-email');
+                            dropdownSelect.textContent = this.textContent;
+                            recipientEmailInput.value = email;
+
+                            if (this.textContent === 'Olesya') {
+                                accessKeyInput.value = '0dd89945-3ba6-42f9-93e2-ff775a2c8a9f';
+                            } else if (this.textContent === 'Nastya') {
+                                accessKeyInput.value = 'c424e5cf-854f-4a17-a08b-1f0aaa45020d';
+                            }
+                        });
+                    });
+                </script>
+
             </div>
 
         </div>
@@ -405,6 +403,7 @@
 
 
     <script defer src="js/index.js"></script>
+    <script src="js/mail.js"></script>
 
 
 

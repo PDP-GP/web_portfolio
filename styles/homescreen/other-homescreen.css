@@ -102,9 +102,7 @@ p{
 .start-text{
     color: white;
     margin-right: 12px;
-    font-size: 25px;
-    /* text-decoration:underline; */
-    
+    font-size: 25px;    
 }
 
 .empty-taskbar{

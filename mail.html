@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="font.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <title>Portfolio</title>
+</head>
+<body style="background-color: #FEE8CF;">
+
+<header>
+    <div class="header-content">
+        <div class="time" id="userTime"></div>
+    </div>
+    <img id="batteryIcon" class="battery-icon" src="battery/battery4.png" alt="Иконка батареи" /> 
+</header>
+
+<div class="profile-top">
+    <img src="mini/mail.png" alt="Иконка почты" style="height: 100%; max-height: 23px;"/> 
+    <span style="font-size: 23px; font-family: 'W95FA', sans-serif; height: 100%; display: flex; align-items: center; padding-left: 5px;">mail</span> 
+    <a href="javascript:history.back()" class="close-button">
+        <img src="button/close.png" alt="Закрыть" style="height: 100%; max-height: 36px;"/> 
+    </a>
+</div>
+
+<div class="separator white-separator"></div>
+<div class="to-field">
+    <div class="to-text">To:</div>
+    <div class="dropdown">
+        <div class="dropdown-select">Select</div>
+    </div>
+    <div class="dropdown-menu">
+        <div class="dropdown-item" data-email="ragozina2003@gmail.com">Nastya</div>
+        <div class="dropdown-divider"></div>
+        <div class="dropdown-item" data-email="olesyalenartovich@gmail.com">Olesya</div>
+    </div>
+</div>
+<div class="separator"></div>
+<form id="emailForm" class="form-container" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" id="accessKey" value="c424e5cf-854f-4a17-a08b-1f0aaa45020d">
+    
+    <input type="hidden" name="email" id="recipientEmail">
+
+    <div class="subject-field">
+        <input type="text" name="subject" class="subject-input" placeholder="Subject" required>
+    </div>
+       
+    <div class="message-field">
+        <textarea class="message-input" name="mail" placeholder="Write a text..." required></textarea> 
+    </div>
+
+    <input type="image" src="photos/popup-img/send1.png" alt="Отправить" class="send-button" id="sendButton" />
+</form>
+
+<script>
+    const dropdownItems = document.querySelectorAll('.dropdown-item');
+    const dropdownSelect = document.querySelector('.dropdown-select');
+    const recipientEmailInput = document.getElementById('recipientEmail');
+    const accessKeyInput = document.getElementById('accessKey');
+
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const email = this.getAttribute('data-email');
+            dropdownSelect.textContent = this.textContent;
+            recipientEmailInput.value = email;
+
+            if (this.textContent === 'Olesya') {
+                accessKeyInput.value = '0dd89945-3ba6-42f9-93e2-ff775a2c8a9f';
+            } else if (this.textContent === 'Nastya') {
+                accessKeyInput.value = 'c424e5cf-854f-4a17-a08b-1f0aaa45020d';
+            }
+        });
+    });
+</script>
+
+
+
+<script src="script.js"></script> 
+</body>
+</html>

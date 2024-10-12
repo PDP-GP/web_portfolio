@@ -1,0 +1,149 @@
+.to-field {
+    display: flex;
+    align-items: center;
+    background-color: #FFD6A6;
+    height: 44px;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+}
+
+.to-text {
+    font-family: 'W95FA', sans-serif;
+    font-size: 150%;
+    color: #F64B81;
+}
+
+.dropdown {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    margin-left: 21px;
+}
+
+.dropdown-select {
+    background-color: white;
+    width: 400px;
+    height: 23px;
+    font-family: 'W95FA', sans-serif;
+    font-size: 120%;
+    color: #FFB35C;
+    padding: 0 5px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.dropdown-icon {
+    margin-left: 5px;
+    font-size: 100%;
+}
+
+.dropdown-menu {
+    margin-top: 100px;
+    display: none;
+    position: absolute;
+    background: white;
+    width: 277px;
+    border: 1px solid #FFB35C;
+    z-index: 1;
+    margin-left: 55px;
+}
+
+.dropdown-item {
+    font-family: 'W95FA', sans-serif;
+    font-size: 120%;
+    color: #FFA1BF;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    color: #F64B81;
+}
+
+.dropdown-divider {
+    height: 2px;
+    background-color: #FFB35C;
+    margin: 0;
+}
+
+.subject-field {
+    
+    /* padding: 10px; */
+    display: flex;
+    justify-content: center; 
+    background-color: #FFD6A6;
+    height: 44px;
+    width: 100%;
+}
+
+.subject-input {
+    background-color: white;
+    width: 400px;
+    height: 23px;
+    color: #FFB35C;
+    font-family: 'W95FA', sans-serif;
+    font-size: 100%;
+    border: none;
+    text-align: left;
+    padding-left: 10px;
+    margin-left: 50px;
+}
+
+.message-field {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    
+}
+
+
+.form-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: stretch; 
+    width: 100%; 
+    background-color: #f3dcf4;
+}
+
+
+.message-input {
+    width: 600px;
+    height: 60vh;
+    color: #000;
+    font-family: 'W95FA', sans-serif;
+    font-size: 120%;
+    resize: none;
+    padding: 10px;
+    background-color: white;
+    border-right: 2px solid #F64B81;
+    border-bottom: 2px solid #F64B81;
+    border-top: none;
+    border-left: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.message-input::placeholder {
+    color: #FEE8CF;
+    opacity: 1;
+}
+
+.subject-input::placeholder {
+    color: #FEE8CF;
+    opacity: 1;
+}
+
+/* .send-button {
+    cursor: pointer;
+}  */
+
+.send-button {
+    width: 172px; 
+    height: auto; 
+    margin-top: 10px; 
+    cursor: pointer;
+    display: inline-block; 
+    align-self: center;
+}

@@ -1,390 +1,485 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="styles/homescreen/icons-homescreen.css">
-        <link rel="stylesheet" href="styles/homescreen/other-homescreen.css">
-        <link rel="stylesheet" href="styles/homescreen/popups.css">
-        <link rel="stylesheet" href="styles/gallery/gallery.css">
-        <style>
-          @font-face {
-              font-family:"pixel-font";
-              src: url(fonts/W95FA.otf) format('opentype');
-          }
 
-      </style>
-  </head>
-  <body>
-    <div class="gallery-app">
-      <div class="header-popup7">
-        <div class="popup7-logo">
-            <img src="photos/popup-img/profile-logo.png" alt="profile logo">
+<head>
+  <link rel="stylesheet" href="styles/homescreen/icons-homescreen.css">
+  <link rel="stylesheet" href="styles/homescreen/other-homescreen.css">
+  <link rel="stylesheet" href="styles/homescreen/popups.css">
+  <link rel="stylesheet" href="styles/gallery/gallery.css">
+  <link rel="stylesheet" href="styles/mail.css">
+  
+  <style>
+    @font-face {
+      font-family: "pixel-font";
+      src: url(fonts/W95FA.otf) format('opentype');
+    }
+  </style>
+</head>
+
+<body>
+  <div class="modal" id="mail-modal">
+    <div class="modal-box"> <!-- модальноеокно-->
+        <div class="popup">
+            <div class="header-popup">
+                <div class="popup-logo">
+                    <img src="photos/popup-img/mail-logo.png" alt="our photo" screet>
+                </div>
+                <div class="popup-text">
+                    <p class="window-name-text">mail.exe</p>
+                </div>
+                <div class="popup-close-button">
+                    <button class="close-button-image" id="close-mail-btn">
+                        <img src="photos/popup-img/close-button.png" style="opacity: 0;">
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="separator white-separator"></div>
+            <div class="to-field">
+                <div class="to-text">To:</div>
+                <div class="dropdown">
+                    <div class="dropdown-select">Select</div>
+                </div>
+                <div class="dropdown-menu">
+                    <div class="dropdown-item" data-email="ragozina2003@gmail.com">Nastya</div>
+                    <div class="dropdown-divider"></div>
+                    <div class="dropdown-item" data-email="olesyalenartovich@gmail.com">Olesya</div>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <form id="emailForm" class="form-container" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" id="accessKey" value="c424e5cf-854f-4a17-a08b-1f0aaa45020d">
+
+                <input type="hidden" name="email" id="recipientEmail">
+
+                <div class="subject-field">
+                    <input type="text" name="subject" class="subject-input" placeholder="Subject" required>
+                </div>
+
+                <div class="message-field">
+                    <textarea class="message-input" name="mail" placeholder="Write a text..." required></textarea>
+                </div>
+
+                <input type="image" src="photos/popup-img/send1.png" alt="Отправить" class="send-button" id="sendButton" />
+            </form>
+
+            <script>
+                const dropdownItems = document.querySelectorAll('.dropdown-item');
+                const dropdownSelect = document.querySelector('.dropdown-select');
+                const recipientEmailInput = document.getElementById('recipientEmail');
+                const accessKeyInput = document.getElementById('accessKey');
+
+                dropdownItems.forEach(item => {
+                    item.addEventListener('click', function () {
+                        const email = this.getAttribute('data-email');
+                        dropdownSelect.textContent = this.textContent;
+                        recipientEmailInput.value = email;
+
+                        if (this.textContent === 'Olesya') {
+                            accessKeyInput.value = '0dd89945-3ba6-42f9-93e2-ff775a2c8a9f';
+                        } else if (this.textContent === 'Nastya') {
+                            accessKeyInput.value = 'c424e5cf-854f-4a17-a08b-1f0aaa45020d';
+                        }
+                    });
+                });
+            </script>
+
         </div>
-        <div class="popup7-text">
-            <p>profile.png</p>
-        </div>   
-        <a href="index.html">
-          <div class="popup7-close-button">
-              <button class="close-button-button-only" id="close-profile-modal-btn">
-                  <img src="photos/popup-img/close-button.png" style="opacity: 0;" alt="close button">
-              </button>
+
+    </div>
+</div>
+
+
+  <div class="gallery-app">
+    <div class="header-popup">
+      <div class="popup-logo">
+        <img src="photos/popup-img/profile-logo.png" alt="profile logo">
+      </div>
+      <div class="popup-text">
+        <p>profile.png</p>
+      </div>
+      <a href="index.html">
+        <div class="popup-close-button">
+          <button class="close-button-image" id="close-profile-modal_button">
+            <img src="photos/popup-img/close-button.png" style="opacity: 0;" alt="close button">
+          </button>
+        </div>
+      </a>
+    </div>
+
+    <div class='contact-us'>
+      <div class="mail-and-number">
+        <div>
+          <p class="mail"><u>Mail</u></p>
+        </div>
+        <div class="phone-number-div"><a class='phone-number' href="tel:88005553535">8-800-555-35-35</a></div>
+      </div>
+    </div>
+
+    <div class="gallery-menu-and-photos">
+
+      <div class="menu-gallery"> <!-- menu -->
+        <p style="margin-left: 7px">Folders</p>
+        <div class="list-folders-gallery">
+
+          <div class="folder-preview" data-tab="photos-grid-maya" id="photos-grid-maya-menu">
+            <div class="list-image"> <img src="photos/popup-img/maya-logo-list.png" alt="maya-logotype"></div>
+            <div class="list-text">
+              <p>3D projects</p>
+            </div>
           </div>
-        </a>
+
+          <div class="folder-preview" data-tab="photos-grid-nastya" id="photos-grid-nastya-menu">
+            <div class="list-image"> <img src="photos/popup-img/nastyas-art-logo-list.png" alt="nastya's-logotype">
+            </div>
+            <div class="list-text">
+              <p>Nastya's art</p>
+            </div>
+          </div>
+
+          <div class="folder-preview" data-tab="photos-grid-olesya" id="photos-grid-olesya-menu">
+            <div class="list-image"> <img src="photos/popup-img/olesyas-art-logo-list.png" alt="olesya's-logotype">
+            </div>
+            <div class="list-text">
+              <p>Olesya's art</p>
+            </div>
+          </div>
+
+        </div>
       </div>
 
-      <div class='contact-us'>
-        <div class="mail-and-number">
-          <div><p class="mail"><u>Mail</u></p></div>
-          <div class="phone-number-div"><a class='phone-number' href="tel:88005553535">8-800-555-35-35</a></div>
+      <div class="photos-grid_white-window">
+
+
+
+
+        <div class="photos-grid hidden" id="photos-grid-maya">
+
+          <div class="photo-preview" data-image-number="0">
+            <div class='thumbnail'>
+              <img src="photos/popup-img/nastyas-interior-1-preview.png" alt="nastyas interior">
+            </div>
+
+            <div class="preview-photo-info">
+              <p class='preview-photo-text'>Nastya's interior.png</p>
+            </div>
+          </div>
+
+          <div class="photo-preview" data-image-number="1">
+            <div class='thumbnail'>
+              <img src="photos/popup-img/nastyas-interior-2-preview.png" alt="nastyas interior">
+            </div>
+
+            <div class="preview-photo-info">
+              <p class='preview-photo-text'>Nastya's interior.png</p>
+            </div>
+          </div>
+
+          <div class="photo-preview" data-image-number="2">
+            <div class='thumbnail'>
+              <img src="photos/popup-img/nastyas-robot-1-preview.png" alt="nastyas robot">
+            </div>
+
+            <div class="preview-photo-info">
+              <p class='preview-photo-text'>Nastya's robot.png</p>
+            </div>
+          </div>
+
+          <div class="photo-preview" data-image-number="3">
+            <div class='thumbnail'>
+              <img src="photos/popup-img/nastyas-robot-2-preview.png" alt="nastyas robot">
+            </div>
+
+            <div class="preview-photo-info">
+              <p class='preview-photo-text'>Nastya's robot.png</p>
+            </div>
+          </div>
+
+          <div class="photo-preview" data-image-number="4">
+            <div class='thumbnail'>
+              <img src="photos/popup-img/nastyas-robot-3-preview.png" alt="nastyas robot">
+            </div>
+
+            <div class="preview-photo-info">
+              <p class='preview-photo-text'>Nastya's robot.png</p>
+            </div>
+          </div>
+
+          <div class="photo-preview" data-image-number="5">
+            <div class='thumbnail'>
+              <img src="photos/popup-img/olesyas-interior-1-preview.png" alt="olesyas interior">
+            </div>
+
+            <div class="preview-photo-info">
+              <p class='preview-photo-text'>Olesya's interior.png</p>
+            </div>
+          </div>
+
+          <div class="photo-preview" data-image-number="6">
+            <div class='thumbnail'>
+              <img src="photos/popup-img/olesyas-interior-2-preview.png" alt="olesyas interior">
+            </div>
+
+            <div class="preview-photo-info">
+              <p class='preview-photo-text'>Olesya's interior.png</p>
+            </div>
+          </div>
+
+          <div class="photo-preview" data-image-number="7">
+            <div class='thumbnail'>
+              <img src="photos/popup-img/olesyas-robot-1-preview.png" alt="olesyas robot">
+            </div>
+
+            <div class="preview-photo-info">
+              <p class='preview-photo-text'>Olesya's robot.png</p>
+            </div>
+          </div>
+
+          <div class="photo-preview" data-image-number="8">
+            <div class='thumbnail'>
+              <img src="photos/popup-img/olesyas-robot-2-preview.png" alt="olesyas robot">
+            </div>
+
+            <div class="preview-photo-info">
+              <p class='preview-photo-text'>Olesya's robot.png</p>
+            </div>
+          </div>
+
+          <div class="photo-preview" data-image-number="9">
+            <div class='thumbnail'>
+              <img src="photos/popup-img/olesyas-robot-3-preview.png" alt="olesyas robot">
+            </div>
+
+            <div class="preview-photo-info">
+              <p class='preview-photo-text'>Olesya's robot.png</p>
+            </div>
+          </div>
         </div>
+
+
+
+        <div class="photos-grid hidden" id="photos-grid-nastya">
+
+          <div class="photo-preview" data-image-number="0">
+            <div class='thumbnail'>
+              <img src="photos/popup-img/green-eyes-preview-2.png" alt="green eyes">
+            </div>
+
+            <div class="preview-photo-info">
+              <p class='preview-photo-text'>Green eyes.png</p>
+            </div>
+          </div>
+
+          <div class="photo-preview" data-image-number="1">
+            <div class='thumbnail'>
+              <img src="photos/popup-img/red-hood-preview.png" alt="red hood">
+            </div>
+
+            <div class="preview-photo-info">
+              <p class='preview-photo-text'>Red Hat with...png</p>
+            </div>
+          </div>
+
+          <div class="photo-preview" data-image-number="2">
+            <div class='thumbnail'>
+              <img src="photos/popup-img/forest-queen-preview.png" alt="forest queen">
+            </div>
+
+            <div class="preview-photo-info">
+              <p class='preview-photo-text'>Forest Quen.png</p>
+            </div>
+          </div>
+
+          <div class="photo-preview" data-image-number="3">
+            <div class='thumbnail'>
+              <img src="photos/popup-img/anna-preview.png" alt="Anna">
+            </div>
+
+            <div class="preview-photo-info">
+              <p class='preview-photo-text'>Anna.png</p>
+            </div>
+          </div>
+
+          <div class="photo-preview" data-image-number="4">
+            <div class='thumbnail'>
+              <img src="photos/popup-img/my-brother-preview.png" alt="my brother">
+            </div>
+
+            <div class="preview-photo-info">
+              <p class='preview-photo-text'>My brother.png</p>
+            </div>
+          </div>
+
+          <div class="photo-preview" data-image-number="5">
+            <div class='thumbnail'>
+              <img src="photos/popup-img/loser-preview.png" alt="loser">
+            </div>
+
+            <div class="preview-photo-info">
+              <p class='preview-photo-text'>Loser.png</p>
+            </div>
+          </div>
+
+          <div class="photo-preview" data-image-number="6">
+            <div class='thumbnail'>
+              <img src="photos/popup-img/oden-preview.png" alt="oden">
+            </div>
+
+            <div class="preview-photo-info">
+              <p class='preview-photo-text'>Oden.png</p>
+            </div>
+          </div>
+
+          <div class="photo-preview" data-image-number="7">
+            <div class='thumbnail'>
+              <img src="photos/popup-img/sad-kitty-preview.png" alt="sad kitty">
+            </div>
+
+            <div class="preview-photo-info">
+              <p class='preview-photo-text'>Sad Kitty.png</p>
+            </div>
+          </div>
+
+          <div class="photo-preview" data-image-number="8">
+            <div class='thumbnail'>
+              <img src="photos/popup-img/japanese-preview.png" alt="japanese cafe">
+            </div>
+
+            <div class="preview-photo-info">
+              <p class='preview-photo-text'>Japanese...png</p>
+            </div>
+          </div>
+
+          <div class="photo-preview" data-image-number="9">
+            <div class='thumbnail'>
+              <img src="photos/popup-img/my-group-preview.png" alt="my group">
+            </div>
+
+            <div class="preview-photo-info">
+              <p class='preview-photo-text'>My group.png</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="photos-grid hidden" id="photos-grid-olesya">
+
+          <div class="photo-preview" data-image-number="0">
+            <div class='thumbnail'>
+              <img src="photos/popup-img/my-groupmates-preview.png" alt="my groupmates">
+            </div>
+
+            <div class="preview-photo-info">
+              <p class='preview-photo-text'>My groupmates.png</p>
+            </div>
+          </div>
+
+          <div class="photo-preview" data-image-number="1">
+            <div class='thumbnail'>
+              <img src="photos/popup-img/little-witch-preview.png" alt="little witch">
+            </div>
+
+            <div class="preview-photo-info">
+              <p class='preview-photo-text'>Little witch.png</p>
+            </div>
+          </div>
+
+          <div class="photo-preview" data-image-number="2">
+            <div class='thumbnail'>
+              <img src="photos/popup-img/grunge-girl-preview.png" alt="grunge girl">
+            </div>
+
+            <div class="preview-photo-info">
+              <p class='preview-photo-text'>Grunge girl.png</p>
+            </div>
+          </div>
+
+          <div class="photo-preview" data-image-number="3">
+            <div class='thumbnail'>
+              <img src="photos/popup-img/girl-with-a-pearl-preview.png" alt="girl witt a pearl earring">
+            </div>
+
+            <div class="preview-photo-info">
+              <p class='preview-photo-text'>Girl with a Pea...png</p>
+            </div>
+          </div>
+
+          <div class="photo-preview" data-image-number="4">
+            <div class='thumbnail'>
+              <img src="photos/popup-img/tired-wonam-preview.png" alt="tired wonam">
+            </div>
+
+            <div class="preview-photo-info">
+              <p class='preview-photo-text'>Tired wonam.png</p>
+            </div>
+          </div>
+
+          <div class="photo-preview" data-image-number="5">
+            <div class='thumbnail'>
+              <img src="photos/popup-img/dont-touch-me-preview.png" alt="dont touch me">
+            </div>
+
+            <div class="preview-photo-info">
+              <p class='preview-photo-text'>Dont touch me.png</p>
+            </div>
+          </div>
+
+          <div class="photo-preview" data-image-number="6">
+            <div class='thumbnail'>
+              <img src="photos/popup-img/shiny-girl-preview.png" alt="shiny girl">
+            </div>
+
+            <div class="preview-photo-info">
+              <p class='preview-photo-text'>Shiny girl.png</p>
+            </div>
+          </div>
+
+          <div class="photo-preview" data-image-number="7">
+            <div class='thumbnail'>
+              <img src="photos/popup-img/just-a-portrait-preview.png" alt="just a portrait">
+            </div>
+
+            <div class="preview-photo-info">
+              <p class='preview-photo-text'>Just a portrait.png</p>
+            </div>
+          </div>
+        </div>
+
       </div>
-      
-        <div class="gallery-menu-and-photos">
 
-          <div class="menu-gallery">                  <!-- menu -->
-            <p style="margin-left: 7px">Folders</p>
-            <div class="list-folders-gallery">
 
-              <div class="folder-preview" data-tab="photos-grid-maya">  <!-- id="maya-menu-item" -->
-                <div class="list-image"> <img src="photos/popup-img/maya-logo-list.png" alt="maya-logotype"></div>
-                <div class="list-text"><p>3D projects</p></div>
-              </div>
+    </div> <!-- gallery-menu-and-photos -->
 
-              <div class="folder-preview" data-tab="photos-grid-nastya">
-                <div class="list-image"> <img src="photos/popup-img/nastyas-art-logo-list.png" alt="nastya's-logotype"></div>
-                <div class="list-text"><p>Nastya's art</p></div>
-              </div>
 
-              <div class="folder-preview" data-tab="photos-grid-olesya">
-                <div class="list-image"> <img src="photos/popup-img/olesyas-art-logo-list.png" alt="olesya's-logotype"></div>
-                <div class="list-text"><p>Olesya's art</p></div>
-              </div>
-              
-            </div>
-          </div>
+    <div class="taskbar">
 
-          <div class="photos-grid-window-white">
+      <div class="start-button open-start">
+        <img class="start-img" src="photos/other-pics-homescreen/start.png" alt="start image">
+        <p class="start-text">Start</p>
+      </div>
 
-                                              
-          
 
-           <div class="photos-grid hidden" id="photos-grid-maya">
-
-            <div class="photo-preview" data-image-number="0">                     
-              <div class='thumbnail'>
-                <img src="photos/popup-img/nastyas-interior-1-preview.png" alt="nastyas interior">
-              </div>
-
-              <div class="preview-photo-info">
-                <p class='preview-photo-text'>Nastya's interior.png</p>
-              </div>
-            </div>
-
-            <div class="photo-preview" data-image-number="1">                     
-              <div class='thumbnail'>
-                <img src="photos/popup-img/nastyas-interior-2-preview.png" alt="nastyas interior">
-              </div>
-
-              <div class="preview-photo-info">
-                <p class='preview-photo-text'>Nastya's interior.png</p>
-              </div>
-            </div>
-
-            <div class="photo-preview"  data-image-number="2">                      
-              <div class='thumbnail'>
-                <img src="photos/popup-img/nastyas-robot-1-preview.png" alt="nastyas robot">
-              </div>
-
-              <div class="preview-photo-info">
-                <p class='preview-photo-text'>Nastya's robot.png</p>
-              </div>
-            </div>
-
-            <div class="photo-preview"  data-image-number="3">                   
-              <div class='thumbnail'>
-                <img src="photos/popup-img/nastyas-robot-2-preview.png" alt="nastyas robot">
-              </div>
-
-              <div class="preview-photo-info">
-                <p class='preview-photo-text'>Nastya's robot.png</p>
-              </div>
-            </div>
-
-            <div class="photo-preview"  data-image-number="4">                   
-              <div class='thumbnail'>
-                <img src="photos/popup-img/nastyas-robot-3-preview.png" alt="nastyas robot">
-              </div>
-
-              <div class="preview-photo-info">
-                <p class='preview-photo-text'>Nastya's robot.png</p>
-              </div>
-            </div>
-
-            <div class="photo-preview"  data-image-number="5">                      
-              <div class='thumbnail'>
-                <img src="photos/popup-img/olesyas-interior-1-preview.png" alt="olesyas interior">
-              </div>
-
-              <div class="preview-photo-info">
-                <p class='preview-photo-text'>Olesya's interior.png</p>
-              </div>
-            </div>
-
-            <div class="photo-preview"  data-image-number="6">                        
-              <div class='thumbnail'>
-                <img src="photos/popup-img/olesyas-interior-2-preview.png" alt="olesyas interior">
-              </div>
-
-              <div class="preview-photo-info">
-                <p class='preview-photo-text'>Olesya's interior.png</p>
-              </div>
-            </div>
-
-            <div class="photo-preview"  data-image-number="7">                     
-              <div class='thumbnail'>
-                <img src="photos/popup-img/olesyas-robot-1-preview.png" alt="olesyas robot">
-              </div>
-
-              <div class="preview-photo-info">
-                <p class='preview-photo-text'>Olesya's robot.png</p>
-              </div>
-            </div>
-
-            <div class="photo-preview"  data-image-number="8">                        
-              <div class='thumbnail'>
-                <img src="photos/popup-img/olesyas-robot-2-preview.png" alt="olesyas robot">
-              </div>
-
-              <div class="preview-photo-info">
-                <p class='preview-photo-text'>Olesya's robot.png</p>
-              </div>
-            </div>
-
-            <div class="photo-preview"  data-image-number="9">                       
-              <div class='thumbnail'>
-                <img src="photos/popup-img/olesyas-robot-3-preview.png" alt="olesyas robot">
-              </div>
-
-              <div class="preview-photo-info">
-                <p class='preview-photo-text'>Olesya's robot.png</p>
-              </div>
-            </div>
-            </div>
-
-
-
-            <div class="photos-grid hidden" id="photos-grid-nastya">
-
-            <div class="photo-preview"  data-image-number="0">                     
-              <div class='thumbnail'>
-                <img src="photos/popup-img/green-eyes-preview-2.png" alt="green eyes">
-              </div>
-
-              <div class="preview-photo-info">
-                <p class='preview-photo-text'>Green eyes.png</p>
-              </div>
-            </div>
-
-            <div class="photo-preview"  data-image-number="1">                      
-              <div class='thumbnail'>
-                <img src="photos/popup-img/red-hood-preview.png" alt="red hood">
-              </div>
-
-              <div class="preview-photo-info">
-                <p class='preview-photo-text'>Red Hat with...png</p>
-              </div>
-            </div>
-
-            <div class="photo-preview"  data-image-number="2">                   
-              <div class='thumbnail'>
-                <img src="photos/popup-img/forest-queen-preview.png" alt="forest queen">
-              </div>
-
-              <div class="preview-photo-info">
-                <p class='preview-photo-text'>Forest Quen.png</p>
-              </div>
-            </div>
-
-            <div class="photo-preview"  data-image-number="3">                   
-              <div class='thumbnail'>
-                <img src="photos/popup-img/anna-preview.png" alt="Anna">
-              </div>
-
-              <div class="preview-photo-info">
-                <p class='preview-photo-text'>Anna.png</p>
-              </div>
-            </div>
-
-            <div class="photo-preview"  data-image-number="4">                      
-              <div class='thumbnail'>
-                <img src="photos/popup-img/my-brother-preview.png" alt="my brother">
-              </div>
-
-              <div class="preview-photo-info">
-                <p class='preview-photo-text'>My brother.png</p>
-              </div>
-            </div>
-
-            <div class="photo-preview"  data-image-number="5">                        
-              <div class='thumbnail'>
-                <img src="photos/popup-img/loser-preview.png" alt="loser">
-              </div>
-
-              <div class="preview-photo-info">
-                <p class='preview-photo-text'>Loser.png</p>
-              </div>
-            </div>
-
-            <div class="photo-preview"  data-image-number="6">                     
-              <div class='thumbnail'>
-                <img src="photos/popup-img/oden-preview.png" alt="oden">
-              </div>
-
-              <div class="preview-photo-info">
-                <p class='preview-photo-text'>Oden.png</p>
-              </div>
-            </div>
-
-            <div class="photo-preview"  data-image-number="7">                        
-              <div class='thumbnail'>
-                <img src="photos/popup-img/sad-kitty-preview.png" alt="sad kitty">
-              </div>
-
-              <div class="preview-photo-info">
-                <p class='preview-photo-text'>Sad Kitty.png</p>
-              </div>
-            </div>
-
-            <div class="photo-preview"  data-image-number="8">                       
-              <div class='thumbnail'>
-                <img src="photos/popup-img/japanese-preview.png" alt="japanese cafe">
-              </div>
-
-              <div class="preview-photo-info">
-                <p class='preview-photo-text'>Japanese...png</p>
-              </div>
-            </div>
-
-            <div class="photo-preview"  data-image-number="9">                        
-              <div class='thumbnail'>
-                <img src="photos/popup-img/my-group-preview.png" alt="my group">
-              </div>
-
-              <div class="preview-photo-info">
-                <p class='preview-photo-text'>My group.png</p>
-              </div>
-            </div> 
-            </div>
-
-            <div class="photos-grid hidden" id="photos-grid-olesya">
-
-              <div class="photo-preview" data-image-number="0">                     
-                <div class='thumbnail'>
-                  <img src="photos/popup-img/my-groupmates-preview.png" alt="my groupmates">
-                </div>
-
-                <div class="preview-photo-info">
-                  <p class='preview-photo-text'>My groupmates.png</p>
-                </div>
-              </div>
-
-              <div class="photo-preview" data-image-number="1">                      
-                <div class='thumbnail'>
-                  <img src="photos/popup-img/little-witch-preview.png" alt="little witch">
-                </div>
-
-                <div class="preview-photo-info">
-                  <p class='preview-photo-text'>Little witch.png</p>
-                </div>
-              </div>
-
-              <div class="photo-preview" data-image-number="2">                   
-                <div class='thumbnail'>
-                  <img src="photos/popup-img/grunge-girl-preview.png" alt="grunge girl">
-                </div>
-
-                <div class="preview-photo-info">
-                  <p class='preview-photo-text'>Grunge girl.png</p>
-                </div>
-              </div>
-
-              <div class="photo-preview" data-image-number="3">                   
-                <div class='thumbnail'>
-                  <img src="photos/popup-img/girl-with-a-pearl-preview.png" alt="girl witt a pearl earring">
-                </div>
-
-                <div class="preview-photo-info">
-                  <p class='preview-photo-text'>Girl with a Pea...png</p>
-                </div>
-              </div>
-
-              <div class="photo-preview" data-image-number="4">                      
-                <div class='thumbnail'>
-                  <img src="photos/popup-img/tired-wonam-preview.png" alt="tired wonam">
-                </div>
-
-                <div class="preview-photo-info">
-                  <p class='preview-photo-text'>Tired wonam.png</p>
-                </div>
-              </div>
-
-              <div class="photo-preview" data-image-number="5">                        
-                <div class='thumbnail'>
-                  <img src="photos/popup-img/dont-touch-me-preview.png" alt="dont touch me">
-                </div>
-
-                <div class="preview-photo-info">
-                  <p class='preview-photo-text'>Dont touch me.png</p>
-                </div>
-              </div>
-
-              <div class="photo-preview" data-image-number="6">                     
-                <div class='thumbnail'>
-                  <img src="photos/popup-img/shiny-girl-preview.png" alt="shiny girl">
-                </div>
-
-                <div class="preview-photo-info">
-                  <p class='preview-photo-text'>Shiny girl.png</p>
-                </div>
-              </div>
-
-              <div class="photo-preview" data-image-number="7">                        
-                <div class='thumbnail'>
-                  <img src="photos/popup-img/just-a-portrait-preview.png" alt="just a portrait">
-                </div>
-
-                <div class="preview-photo-info">
-                  <p class='preview-photo-text'>Just a portrait.png</p>
-                </div>
-              </div>
-            </div>
-          
-          </div>
-
-
-        </div>   <!-- gallery-menu-and-photos -->
-
-
-        <div class="taskbar">
-            
-          <div class="start-button open-start">
-              <img class="start-img" src="photos/other-pics-homescreen/start.png" alt="start image">    
-              <p class="start-text">Start</p>
-          </div>
-          
-      
       <div class="empty-taskbar"></div>
       <div class="date-and-time">
-          <div class="year">
-              <p class="date-and-time-text">2024</p>
-          </div>
-          <div class="time">
-              <div class="date-and-time-text" id="userTime"></div>
-          </div>
+        <div class="year">
+          <p class="date-and-time-text">2024</p>
+        </div>
+        <div class="time">
+          <div class="date-and-time-text" id="userTime"></div>
+        </div>
       </div>
+    </div>
+
+
   </div>
 
-      
-    </div>
-    <script defer src="js/gallery-menu.js"></script>
-  </body>
+
+
+
+
+  <script defer src="js/gallery-menu.js"></script>
+
+  <script defer src="js/mail.js"></script>
+</body>
+
 </html>

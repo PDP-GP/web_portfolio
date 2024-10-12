@@ -1,13 +1,13 @@
 
 
-.btn7{
+.modal-window-button{
     background-color: rgba(240, 248, 255, 0);
     border-style: solid;
     border-color: rgba(240, 248, 255, 0);
     
 }
 
-.btn7:hover{
+.modal-window-button:hover{
     background-color: rgba(255, 255, 255, 0.325);
     border-color: rgba(255, 255, 255, 0.679);
     cursor: pointer;
@@ -49,14 +49,14 @@
 
 /* -----------chernovik-styles-------------- */
 
-.popup7{
+.popup{
 
     display: inline-block;
     flex-direction: column;
     background-color: #FEE8EB;
 }
 
-.header-popup7{
+.header-popup{
     height: 36px;
     background-color: #DBD6FD;
     display: flex;
@@ -67,7 +67,7 @@
     
     
 }
-.popup7-logo{
+.popup-logo{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,7 +75,7 @@
     
 }
 
-.img7{
+.popup-image{
     /* justify-content: center; */
 }
 
@@ -83,13 +83,13 @@
     color: black;
 }
 
-.popup7-text{
+.popup-text{
     margin-left: 10px;
     flex: 1;
     
 }
 
-.popup7-close-button{
+.popup-close-button{
     margin-right: 8px;
     display: flex;
     justify-content: center;
@@ -98,7 +98,7 @@
     align-self: center;
 }
 
-.close-button-button-only{
+.close-button-image{
     width: 36px;
     height: 31px;
     /* background-color: white; */
@@ -107,7 +107,7 @@
     border: none;
 }
 
-.close-button-button-only:hover{
+.close-button-image:hover{
     cursor: pointer;
     background-image: url('../../photos/popup-img/close-button-hover.png');
 }
@@ -138,6 +138,9 @@
 
 .mail{
     color: #EB2864;
+}
+.mail:hover{
+    cursor: pointer;
 }
 
 .phone-number{

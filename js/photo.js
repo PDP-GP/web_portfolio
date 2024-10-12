@@ -46,7 +46,7 @@ images = [
     { src: 'photos/3D/img7.png', title: 'Olesyas interior 2', alt: 'Olesyas interior 2 picture' },
     { src: 'photos/3D/img8.png', title: 'Olesyas robot', alt: 'Olesyas interior 2 picture' },
     { src: 'photos/3D/img9.png', title: 'Olesyas robot 2', alt: 'Olesyas robot 2 picture' },
-    { src: 'photos/3D/img10.png', title: 'Olesyas robot 3', alt: 'Olesyas robot 3 pictures' },
+    { src: 'photos/3D/img10.png', title: 'Olesyas robot 3', alt: 'Olesyas robot 3 picture' },
 ];
 
 

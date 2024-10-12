@@ -4,6 +4,7 @@ if (tab == null){
     tab = "photos-grid-maya"
 }
 document.querySelector('#' + tab).classList.remove('hidden')
+document.querySelector('#' + tab + "-menu").classList.add('folder-preview-selected')
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -24,6 +25,9 @@ const photosGrid = document.querySelectorAll('.photos-grid');
 
 for (let item of folderPreview) {
     item.addEventListener('click', function() {
+
+        folderPreview.forEach(element => element.classList.remove("folder-preview-selected"))
+        item.classList.add('folder-preview-selected')
 
         for (let element of photosGrid){
             element.classList.add('hidden')
@@ -55,7 +59,6 @@ for (let item of document.getElementsByClassName("photo-preview")) {
 
 
 
-
     // const images = [
     //     {src: 'Olesya/img1.png', title: 'My groupmates', alt: 'Группа студентов'},
     //     {src: 'Olesya/img2.png', title: 'Little witch', alt: 'Маленькая ведьма'},
@@ -63,7 +66,7 @@ for (let item of document.getElementsByClassName("photo-preview")) {
     //     {src: 'Olesya/img4.png', title: 'Girl redraw', alt: 'Переосмысленный рисунок девушки'},
     //     {src: 'Olesya/img5.png', title: 'Tired Woman', alt: 'Уставшая женщина'},
     //     {src: 'Olesya/img6.png', title: 'Don’t Touch Me', alt: 'Не трогай меня'},
-    //     {src: 'Olesya/img7.png', title: 'Shiny Girl', alt: 'Сияющая девушка'},
+    //     {src: 'Olesya/popup-image.png', title: 'Shiny Girl', alt: 'Сияющая девушка'},
     //     {src: 'Olesya/img8.png', title: 'Just a portrait', alt: 'Просто портрет'},
     // ];
 

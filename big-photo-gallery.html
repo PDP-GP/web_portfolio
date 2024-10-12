@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="styles/homescreen/icons-homescreen.css">
         <link rel="stylesheet" href="styles/homescreen/other-homescreen.css">
         <link rel="stylesheet" href="styles/homescreen/popups.css">
+        <link rel="stylesheet" href="styles/mail.css">
+
     <style>
         @font-face {
             font-family: "pixel-font";
@@ -17,15 +19,15 @@
 <body>
     <div class="photo-window">
         <!-- <div class="header-popup-test"> -->
-            <div class="header-popup7">
-                <div class="popup7-logo">
+            <div class="header-popup">
+                <div class="popup-logo">
                     <img src="photos/popup-img/folder-logo.png" alt="folder" screet>
                 </div>
-                <div class="popup7-text">
+                <div class="popup-text">
                     <p class="window-name-text" id="projectTitle"></p>
                 </div>
-                <div class="popup7-close-button">
-                    <button class="close-button-button-only" id="close-photo-modal-btn">
+                <div class="popup-close-button">
+                    <button class="close-button-image" id="close-photo-modal-btn">
                         <img src="photos/popup-img/close-button.png" style="opacity: 0;">
                     </button>
                 </div>
@@ -83,7 +85,82 @@
         </div>
     </div>
 
+    <div class="modal" id="mail-modal">
+        <div class="modal-box"> <!-- модальноеокно-->
+            <div class="popup">
+                <div class="header-popup">
+                    <div class="popup-logo">
+                        <img src="photos/popup-img/mail-logo.png" alt="our photo" screet>
+                    </div>
+                    <div class="popup-text">
+                        <p class="window-name-text">mail.exe</p>
+                    </div>
+                    <div class="popup-close-button">
+                        <button class="close-button-image" id="close-mail-btn">
+                            <img src="photos/popup-img/close-button.png" style="opacity: 0;">
+                        </button>
+                    </div>
+    
+                </div>
+    
+                <div class="separator white-separator"></div>
+                <div class="to-field">
+                    <div class="to-text">To:</div>
+                    <div class="dropdown">
+                        <div class="dropdown-select">Select</div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-item" data-email="ragozina2003@gmail.com">Nastya</div>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-item" data-email="olesyalenartovich@gmail.com">Olesya</div>
+                    </div>
+                </div>
+                <div class="separator"></div>
+                <form id="emailForm" class="form-container" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" id="accessKey" value="c424e5cf-854f-4a17-a08b-1f0aaa45020d">
+    
+                    <input type="hidden" name="email" id="recipientEmail">
+    
+                    <div class="subject-field">
+                        <input type="text" name="subject" class="subject-input" placeholder="Subject" required>
+                    </div>
+    
+                    <div class="message-field">
+                        <textarea class="message-input" name="mail" placeholder="Write a text..." required></textarea>
+                    </div>
+    
+                    <input type="image" src="photos/popup-img/send1.png" alt="Отправить" class="send-button" id="sendButton" />
+                </form>
+    
+                <script>
+                    const dropdownItems = document.querySelectorAll('.dropdown-item');
+                    const dropdownSelect = document.querySelector('.dropdown-select');
+                    const recipientEmailInput = document.getElementById('recipientEmail');
+                    const accessKeyInput = document.getElementById('accessKey');
+    
+                    dropdownItems.forEach(item => {
+                        item.addEventListener('click', function () {
+                            const email = this.getAttribute('data-email');
+                            dropdownSelect.textContent = this.textContent;
+                            recipientEmailInput.value = email;
+    
+                            if (this.textContent === 'Olesya') {
+                                accessKeyInput.value = '0dd89945-3ba6-42f9-93e2-ff775a2c8a9f';
+                            } else if (this.textContent === 'Nastya') {
+                                accessKeyInput.value = 'c424e5cf-854f-4a17-a08b-1f0aaa45020d';
+                            }
+                        });
+                    });
+                </script>
+    
+            </div>
+    
+        </div>
+    </div>
+    
+
     <script defer src="js/photo.js"></script>
+    <script defer src="js/mail.js"></script>
 </body>
 
 </html>

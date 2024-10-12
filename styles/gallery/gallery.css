@@ -28,7 +28,7 @@
     color: #EB2864;
 }
 
-.photos-grid-window-white{
+.photos-grid_white-window{
     background-color: white;
     width: 100%;
     margin-right: 35px;
@@ -70,13 +70,6 @@
     overflow-y: auto;
 }
 
-/* .photos-grid-hidden{
-    visibility: hidden;
-    height: 0;
-    width: 0;
-    margin: 0;
-    padding: 0;
-} */
 
 .hidden{
     display: none;
@@ -85,7 +78,10 @@
 .photo-preview{
     text-align: center;
     align-self: center;
+}
 
+.photo-preview:hover{
+    cursor: pointer;
 }
 
 .thumbnail{
@@ -163,7 +159,7 @@ body {
 }
 
 .big-photo-div{
-    background-color: #EB2864;
+    /* background-color: rgb(134, 38, 38); */
     /* text-align: center; */
     display: grid;
     justify-content: center;
@@ -172,7 +168,7 @@ body {
 
 }
 .big-photo-grid{
-    background-color: #00ff99;
+    background-color: white;
     flex: 1;
     display: flex;
     /* position: relative; */
