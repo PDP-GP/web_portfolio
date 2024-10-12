@@ -1,0 +1,181 @@
+
+
+.gallery-app{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    
+}
+
+
+.p{
+    color: #EB2864;
+}
+
+.gallery-menu-and-photos{
+    display: flex;
+    flex-direction: row;
+    background-color: #FEE8EB;
+    height: 100vh;
+}
+
+.menu-gallery{
+    margin-left: 13px;
+    width: 215px;
+    border: solid 3px;
+    border-color: white #EB2864 #EB2864 white;
+    min-width: 200px;
+    color: #EB2864;
+}
+
+.photos-grid-window-white{
+    background-color: white;
+    width: 100%;
+    margin-right: 35px;
+    overflow-y: scroll;
+}
+
+.list-folders-gallery{
+    margin-top: 25px;
+    
+}
+
+.folder-preview{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    padding-left: 40px;
+    cursor: pointer;
+}
+
+.folder-preview-selected{
+    background-color:#FDCCD6;
+    
+}
+
+.list-text{
+    margin-left: 15px;
+}
+
+.photos-grid{
+    display:flex;
+    flex-wrap: wrap;
+    margin-left: 37px;
+    margin-right: 20px;
+    margin-top: 35px;
+    margin-bottom: 10px;
+    column-gap: 30px;
+    row-gap: 40px;
+    overflow-y: auto;
+}
+
+/* .photos-grid-hidden{
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    margin: 0;
+    padding: 0;
+} */
+
+.hidden{
+    display: none;
+}
+
+.photo-preview{
+    text-align: center;
+    align-self: center;
+
+}
+
+.thumbnail{
+    margin-bottom: 12px;
+}
+
+.bottom-pink{
+    background-color: #EB2864;
+    height: 100%;
+}
+
+.preview-photo-text{
+    color: #EB2864;
+}
+.photo-with-buttons{
+   background-color:#FCE7EA;
+}
+.photo-without-buttons{
+    background-color: rgb(58, 26, 186);
+   
+}
+.photo-white-window{
+    background-color: white;
+}
+
+
+
+.photo-window{
+    display: flex;
+    flex-direction: column;
+    /* position: relative; */
+    height:100vh;
+    /* flex: auto auto 1 auto; */
+    /* margin-top: 0; */
+}
+
+
+
+body {
+    margin: 0;
+}
+
+    
+
+
+.taskbar-and-buttons{
+    height: 130px;
+    background-color: #EB2864;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+}
+
+.buttons-photo{
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    background-color: #FEE8EB;
+    align-items: center;
+    justify-content: center;
+
+}
+.taskbar-photo{
+    height: 50px;
+    background-color: green;
+}
+
+.big-photo{
+    width: 100%;
+    align-self: center;
+    /* text-align: center; */
+
+}
+
+.big-photo-div{
+    background-color: #EB2864;
+    /* text-align: center; */
+    display: grid;
+    justify-content: center;
+    margin-left: 30px;
+    margin-right: 30px;
+
+}
+.big-photo-grid{
+    background-color: #00ff99;
+    flex: 1;
+    display: flex;
+    /* position: relative; */
+    justify-content: center;
+
+}

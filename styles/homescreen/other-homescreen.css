@@ -16,59 +16,29 @@ p{
     src: url(fonts/W95FA.otf) format('opentype');
 }
 
-
-/* .wind-and-gmail-blue-homescreen-grid{
-    display: grid;
-    grid-template-columns: 490px 1fr;
-    margin-left: 80px;
-
-    
-}
-.windows{
-    background-color: lightpink;
-    min-width: 490px;
-}
-.gmail-address{
-    background-color: lightblue;
-    position: relative;
-    text-align: right;
-    min-width: 490px;
+.homescreen-without-taskbar{
+    overflow-x: auto;
 }
 
-.gmail-address-text{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    font-size: 30px;
-    width: 450px;
-    margin-bottom: 50px;
-    margin-right: 30px;
-    
-} */
-
-
-
-
-
-
-
-
+.overlay1{
+    pointer-events: none;
+}
 
 
 .wind-and-gmail-blue-homescreen-grid{
     display: flex;
     flex-direction: row;
     position: fixed;
-    left: 0;
+    right: 30px;
     bottom: 130px;
     width: 100%;
 }
 
 .windows{
-    margin-left: 70px;
-    min-width: 490px;
-    
+    margin-right: 50px;
 }
+
+ 
 
 
 .gmail-address{
@@ -76,7 +46,7 @@ p{
     flex-direction: column;
     flex: 1;
     justify-content: end;
-    align-items: end;
+    align-items: start;
 }
 .gmail-address-text{
     font-size: 30px;
@@ -101,27 +71,39 @@ p{
     background-color: #DCAADF;
 }
 
-.start{
+.start-button{
     display: flex;
     flex-direction: row;
+    
     background-color: #DDA0E3;
     border-color: #CC8DD2 white;
     border-style: outset ;
     border-width: 4px;
     width: 120px;
-    margin-left: 30px;
+    margin-left: 20px;
     margin-bottom: 10px;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
+    
 }
+
+.start-button:hover{
+    cursor: pointer;
+}
+
+.start-button:active{
+    opacity: 0.8;
+}
+
 .start-img{
-    width: 95%;
-    margin-right: 8px;
+    margin-left: 10px;
+    
 }
 .start-text{
     color: white;
     margin-right: 12px;
     font-size: 25px;
+    /* text-decoration:underline; */
     
 }
 
@@ -149,6 +131,7 @@ p{
     
 }
 .date-and-time-text{
+    font-family: 'pixel-font', sans-serif;
     color: white;
     font-size: 22px;
 }

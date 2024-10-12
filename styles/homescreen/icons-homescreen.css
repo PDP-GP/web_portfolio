@@ -9,9 +9,9 @@
 }
 
 
-.empty-place{
+/* .empty-place{
     min-width: 420px;
-}
+} */
 
 
 .icon-png-scarlet-ring, .icon-png{
@@ -28,6 +28,9 @@
     margin-top: 15%;
     border-width: 1px;
     display: inline-block;
+    max-width: 100%;
+    height: auto;
+    
     
 
 }

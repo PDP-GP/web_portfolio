@@ -1,303 +1,156 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="styles/homescreen/icons-homescreen.css">
-        <link rel="stylesheet" href="styles/homescreen/other-homescreen.css">
-        <link rel="stylesheet" href="styles/homescreen/popups.css">
-        <style>
-            @font-face {
-                font-family:"pixel-font";
-                src: url(fonts/W95FA.otf) format('opentype');
-            }
 
-        </style>
-
-
-    </head>
-    <body>
-        
-        <!-- иконки на рабочем столе -->
-        <div class="icons-blue-homescreen-greed">
-
-            <!-- первый столбец иконок -->
-            <div class="left-icons">
-
-                
-                <!-- иконка на рабочем столе 1-->
-                <button class="btn7" id="open-modal-profile-btn">
-                    <div class="icon-png">
-                        
-                        <div class="just-icon">
-                            <img  class="icon-pic" src="photos/icons-homescreen/profile-icon.png" alt="profile icon">
-                        </div>
-
-                        <div class="text-under-icon">
-                            <p>profile.png</p>
-                        
-                        </div>
-                    </div>
-                </button>
-
-                
-               
-
-            
+<head>
+    <link rel="stylesheet" href="styles/homescreen/icons-homescreen.css">
+    <link rel="stylesheet" href="styles/homescreen/other-homescreen.css">
+    <link rel="stylesheet" href="styles/homescreen/popups.css">
+    <link rel="stylesheet" href="styles/homescreen/gallery.css">
+    <style>
+        @font-face {
+            font-family: "pixel-font";
+            src: url(fonts/W95FA.otf) format('opentype');
+        }
+    </style>
 
 
+</head>
+
+<body>
+
+    <!-- иконки на рабочем столе -->
+    <div class="icons-blue-homescreen-greed">
+
+        <!-- первый столбец иконок -->
+        <div class="left-icons">
 
 
-
-                <!-- иконка на рабочем столе 2-->
-                <button class="btn7" id="open-razrab-modal-btn">
-                    <div class="icon-png">
-                        
-                        <div class="just-icon">
-                            <img  class="icon-pic" src="photos/icons-homescreen/nastyas-art-icon.png" alt="Floder with stars">
-                        </div>
-
-                        <div class="text-under-icon">
-                            <p>Nastya's art</p>
-                        </div>
-                    </div>
-                </button>
-
-
-                <!-- иконка на рабочем столе 3-->
-                <button class="btn7" id="open-badminton">
+            <!-- иконка на рабочем столе 1-->
+            <button class="btn7" id="open-modal-profile-btn">
                 <div class="icon-png">
-                                    
+
                     <div class="just-icon">
-                        <img  class="icon-pic" src="photos/icons-homescreen/sky-badm-icon.png" alt="shuttlecock ">
+                        <img class="icon-pic" src="photos/icons-homescreen/profile-icon-2.png" alt="profile icon">
+                    </div>
+
+                    <div class="text-under-icon">
+                        <p>profile.png</p>
+
+                    </div>
+                </div>
+            </button>
+
+
+
+
+
+
+
+
+
+
+            <!-- иконка на рабочем столе 2-->
+            <button class="btn7" id="open-razrab-modal-btn" data-tab="photos-grid-nastya">
+                <div class="icon-png">
+
+                    <div class="just-icon">
+                        <img class="icon-pic" src="photos/icons-homescreen/nastyas-art-icon-2.png"
+                            alt="Floder with stars">
+                    </div>
+
+                    <div class="text-under-icon">
+                        <p>Nastya's art</p>
+                    </div>
+                </div>
+            </button>
+
+
+            <!-- иконка на рабочем столе 3-->
+            <button class="btn7" id="open-badminton">
+                <div class="icon-png">
+
+                    <div class="just-icon">
+                        <img class="icon-pic" src="photos/icons-homescreen/sky-badm-icon-2.png" alt="shuttlecock ">
                     </div>
 
                     <div class="text-under-icon">
                         <p>SkyBadmintont</p>
                     </div>
                 </div>
-                </button>
+            </button>
 
-                <!-- иконка на рабочем столе 4-->
-                <button class="btn7" id="open-scarlet-ring">
+            <!-- иконка на рабочем столе 4-->
+            <button class="btn7" id="open-scarlet-ring">
                 <div class="icon-png-scarlet-ring">
-                                    
+
                     <div class="just-icon">
-                        <img  class="icon-pic" src="photos/icons-homescreen/scarlet-ring-icon.png" alt="handprint">
+                        <img class="icon-pic" src="photos/icons-homescreen/scarlet-ring-icon-2.png" alt="handprint">
                     </div>
 
                     <div class="text-under-icon">
                         <p>SkarletRing</p>
                     </div>
                 </div>
-                </button>
-            </div>
+            </button>
+        </div>
 
 
-            <!-- второй столбец иконок -->
-            <div class="middle-icons">
-                <!-- иконка на рабочем столе 5-->
-                <button class="btn7" id="open-razrab5-modal-btn">
-                    <div class="icon-png">
-                        
-                        <div class="just-icon">
-                            <img  class="icon-pic" src="photos/icons-homescreen/maya-icon.png" alt="maya icon">
-                        </div>
+        <!-- второй столбец иконок -->
+        <div class="middle-icons">
+            <!-- иконка на рабочем столе 5-->
 
-                        <div class="text-under-icon">
-                            <p>3D projects</p>
-                        </div>
-                    </div>
-                </button>
-
-                
-         <!-- иконка на рабочем столе 6-->
-                <button id="open-razrab6-modal-btn" class="btn7">
+            <button class="btn7" id="open-gallery-maya" data-tab="photos-grid-maya">
                 <div class="icon-png">
-                    
+
                     <div class="just-icon">
-                        <img  class="icon-pic" src="photos/icons-homescreen/olesyas-art-icon.png" alt="folder with cupcake">
+                        <img class="icon-pic" src="photos/icons-homescreen/maya-icon-2.png" alt="maya icon">
+                    </div>
+
+                    <div class="text-under-icon">
+                        <p>3D projects</p>
+                    </div>
+                </div>
+            </button>
+
+            <!-- иконка на рабочем столе 6-->
+            <button id="open-razrab6-modal-btn" class="btn7" data-tab="photos-grid-maya">
+                <div class="icon-png">
+
+                    <div class="just-icon">
+                        <img class="icon-pic" src="photos/icons-homescreen/olesyas-art-icon-2.png"
+                            alt="folder with cupcake">
                     </div>
 
                     <div class="text-under-icon">
                         <p>Olesya's art</p>
                     </div>
                 </div>
-            </div>
-            <div class="empty-place"></div>
-
-
-
-
-
-
-            <!-- третий столбец иконок -->
-            <div class="right-icons">
-                <button id="open-modal-btn" class="btn7">
-                    <!-- иконка на рабочем столе 7-->
-                    <div class="icon-png">
-                                        
-                        <div class="just-icon">
-                            <img  class="icon-pic" src="photos/icons-homescreen/photo-icon.png" alt="paper">
-                        </div>
-
-                        <div class="text-under-icon">
-                            <p>photo.png</p>
-                        </div>
-                    </div>
-                </button>
-            </div>
-            
+            </button>
         </div>
+        <div class="empty-place"></div>
 
- <!-- модальное окно 7 -->
-        <div class="modal" id="photo-modal">
-            <div class="modal-box">         <!-- модальноеокно-->
-                <div class="popup7">
-                    <div class="header-popup7">
-                        <div class="popup7-logo">
-                            <img src="photos/popup-img/photo-logo.png" alt="our photo">
-                        </div>
-                        <div class="popup7-text">
-                            <p>photo-Paint</p>
-                        </div>
-                        <div class="popup7-close-button">
-                            <button class="close-button-button-only" id="close-photo-modal-btn">
-                                <img src="photos/popup-img/close-button.png" style="opacity: 0;">
-                            </button>
-                        </div>
-                        
+
+
+
+
+        <!-- третий столбец иконок -->
+        <div class="right-icons">
+            <button id="open-modal-btn" class="btn7">
+                <!-- иконка на рабочем столе 7-->
+                <div class="icon-png">
+
+                    <div class="just-icon">
+                        <img class="icon-pic" src="photos/icons-homescreen/photo-icon-2.png" alt="paper">
                     </div>
-            
-                    <div class="img7">
-                        <img src="photos/popup-img/photo-img2.png" alt="our photo">
+
+                    <div class="text-under-icon">
+                        <p>photo.png</p>
                     </div>
                 </div>
-
-            </div>
-        </div>
-
-<!-- модальное окно 1 -->
-
-<div class="modal" id="profile-modal">
-    <div class="modal-box">         <!-- модальноеокно-->
-        <div class="popup7">
-            <div class="header-popup7">
-                <div class="popup7-logo">
-                    <img src="photos/popup-img/profile-logo.png" alt="profile logo">
-                </div>
-                <div class="popup7-text">
-                    <p>photo-Paint</p>
-                </div>
-                <div class="popup7-close-button">
-                    <button class="close-button-button-only" id="close-profile-modal-btn">
-                        <img src="photos/popup-img/close-button.png" style="opacity: 0;" alt="close button">
-                    </button>
-                </div>
-                
-            </div>
-    
-            <div class="img7">
-                <img src="photos/popup-img/profile-photo-img.png" alt="Nastya's and Olesya's characteristics">
-            </div>
+            </button>
         </div>
 
     </div>
-</div>
-
-
-<!-- модальное окно разраб -->
-<div class="modal" id="razrab-modal">
-    <div class="modal-box">         <!-- модальноеокно-->
-        <div class="popup7">
-            <div class="header-popup7">
-                <div class="popup7-logo">
-                    <img src="photos/popup-img/nastyas-art-logo.png" alt="nastya's art logo">
-                </div>
-                <div class="popup7-text">
-                    <p>photo-Paint</p>
-                </div>
-                <div class="popup7-close-button">
-                    <button class="close-button-button-only" id="close-razrab-modal-btn">
-                        <img src="photos/popup-img/close-button.png" style="opacity: 0;" alt="close button">
-                    </button>
-                </div>
-                
-            </div>
-    
-            <div class="img7">
-                <p class="razrabotka-text">This app is currently in development. Please, check up later</p>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-
-
-
-<!-- модальное окно6 разраб -->
-<div class="modal" id="razrab6-modal">
-    <div class="modal-box">         <!-- модальноеокно-->
-        <div class="popup7">
-            <div class="header-popup7">
-                <div class="popup7-logo">
-                    <img src="photos/popup-img/olesyas-art-logo.png" alt="olesya's art logo">
-                </div>
-                <div class="popup7-text">
-                    <p>photo-Paint</p>
-                </div>
-                <div class="popup7-close-button">
-                    <button class="close-button-button-only" id="close-razrab6-modal-btn">
-                        <img src="photos/popup-img/close-button.png" style="opacity: 0;" alt="close button">
-                    </button>
-                </div>
-                
-            </div>
-    
-            <div class="img7">
-                <p class="razrabotka-text">This app is currently in development. Please, check up later</p>
-
-            </div>
-        </div>
-
-    </div>
-</div>
-
-
-
-
-<!-- модальное окно 5 разраб -->
-<div class="modal" id="razrab5-modal">
-    <div class="modal-box">         <!-- модальноеокно-->
-        <div class="popup7">
-            <div class="header-popup7">
-                <div class="popup7-logo">
-                    <img src="photos/popup-img/maya-logo.png" alt="maya logo">
-                </div>
-                <div class="popup7-text">
-                    <p>photo-Paint</p>
-                </div>
-                <div class="popup7-close-button">
-                    <button class="close-button-button-only" id="close-razrab5-modal-btn">
-                        <img src="photos/popup-img/close-button.png" style="opacity: 0;"  alt="close button">
-                    </button>
-                </div>
-                
-            </div>
-    
-            <div class="img7">
-                <p class="razrabotka-text">This app is currently in development. Please, check up later</p>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-
-
-
-
-
-<script defer src="index.js"></script>
 
 
 
@@ -310,51 +163,251 @@
 
 
 
+
+
+    <div class="homescreen-without-taskbar">
 
 
         <!-- виндоус и мыло на рабочем столе -->
-        <div class="wind-and-gmail-blue-homescreen-grid">
-            <div class="windows">
-                <!-- <img class="windows-pic" src="photos/other-pics-homescreen/windows.png"> -->
-            </div>
-            <div class="gmail-address">      
-                    <p class="gmail-address-text">
+        <div class="wind-and-gmail-blue-homescreen-grid overlay1">
+
+            <div class="gmail-address overlay1">
+                <!-- <p class="gmail-address-text">
                         Nastya: ragozina2003@gmail.com
                         Olesya: olesyalenartovich@gmail.com
                     </p>
                     <p class="gmail-address-text">+7-952-286-69-12</p>
-                    <p class="gmail-address-text">8-800-555-35-35</p>
-                        
+                    <p class="gmail-address-text">8-800-555-35-35</p>            -->
+            </div>
+
+            <div class="windows overlay1">
+                <img class="windows-pic" src="photos/other-pics-homescreen/windows-smaller.png">
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <!-- пусковая панель -->
+    <div class="taskbar">
+
+        <div class="start-button open-start">
+            <img class="start-img" src="photos/other-pics-homescreen/start.png" alt="start image">
+            <p class="start-text">Start</p>
+        </div>
+
+
+        <div class="empty-taskbar"></div>
+        <div class="date-and-time">
+            <div class="year">
+                <p class="date-and-time-text">2024</p>
+            </div>
+            <div class="time">
+                <div class="date-and-time-text" id="userTime"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- модальное окно 7 -->
+    <div class="modal" id="photo-modal">
+        <div class="modal-box"> <!-- модальноеокно-->
+            <div class="popup7">
+                <div class="header-popup7">
+                    <div class="popup7-logo">
+                        <img src="photos/popup-img/photo-logo.png" alt="our photo" screet>
+                    </div>
+                    <div class="popup7-text">
+                        <p class="window-name-text">photo-Paint</p>
+                    </div>
+                    <div class="popup7-close-button">
+                        <button class="close-button-button-only" id="close-photo-modal-btn">
+                            <img src="photos/popup-img/close-button.png" style="opacity: 0;">
+                        </button>
+                    </div>
+
+                </div>
+                <div class="contact-us">
+                    <div class="mail-and-number">
+                        <div>
+                            <p class="mail"><u>Mail</u></p>
+                        </div>
+                        <div class="phone-number-div"><a class='phone-number' href="tel:88005553535">8-800-555-35-35</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="img7">
+                    <img src="photos/popup-img/photo-img-550-short.png" alt="our photo" srcset="
+                photos/popup-img/photo-img-380-short.png 380w,
+                photos/popup-img/photo-img-550-short.png 550w
+                " sizes="
+                (max-height: 900px) 380px,
+                (max-height: 1500px) 550px,
+                ">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- модальное окно 1 -->
+
+    <div class="modal" id="profile-modal">
+        <div class="modal-box"> 
+            <div class="popup7">
+                <div class="header-popup7">
+                    <div class="popup7-logo">
+                        <img src="photos/popup-img/profile-logo.png" alt="profile logo">
+                    </div>
+                    <div class="popup7-text">
+                        <p class="window-name-text">profile.png</p>
+                    </div>
+                    <div class="popup7-close-button">
+                        <button class="close-button-button-only" id="close-profile-modal-btn">
+                            <img src="photos/popup-img/close-button.png" style="opacity: 0;" alt="close button">
+                        </button>
+                    </div>
+
+                </div>
+                <div class="contact-us">
+                    <div class="mail-and-number">
+                        <div>
+                            <p class="mail"><u>Mail</u></p>
+                        </div>
+                        <div class="phone-number-div"><a class='phone-number' href="tel:88005553535">8-800-555-35-35</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="img7">
+                    <img src="photos/popup-img/profile-photo-img-629-short.png"
+                        alt="Nastya's and Olesya's characteristics" srcset="
+                photos/popup-img/profile-photo-img-475-short.png 475w,
+                photos/popup-img/profile-photo-img-629-short.png 629w
+                " sizes="
+                (max-height: 980px) 475px,
+                (max-height: 1500px) 629px,
+                ">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- модальное окно разраб -->
+    <!-- <div class="modal" id="razrab-modal">
+        <div class="modal-box">
+            <div class="popup7">
+                <div class="header-popup7">
+                    <div class="popup7-logo">
+                        <img src="photos/popup-img/nastyas-art-logo.png" alt="nastya's art logo">
+                    </div>
+                    <div class="popup7-text">
+                        <p class="window-name-text">Nastya's art</p>
+                    </div>
+                    <div class="popup7-close-button">
+                        <button class="close-button-button-only" id="close-razrab-modal-btn">
+                            <img src="photos/popup-img/close-button.png" style="opacity: 0;" alt="close button">
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="gallery-container">
+                    <p id='button1'>1</p>
+                    <p id='button2'>2</p>
+                    <div id='gallery-slide1'>
+
+                        <p class="razrabotka-text">NASTYA This app is currently in development. Please, check up later
+                            NN</p>
+                    </div>
+                    <div id='gallery-slide2'>
+                        <p class="razrabotka-text">NOT NASTYA This app is currently in development. Please, check up
+                            later FF</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div> -->
+
+
+
+
+    <!-- модальное окно6 разраб -->
+    <!-- <div class="modal" id="razrab6-modal">
+        <div class="modal-box">
+             <div class="popup7">
+                <div class="header-popup7">
+                    <div class="popup7-logo">
+                        <img src="photos/popup-img/olesyas-art-logo.png" alt="olesya's art logo">
+                    </div>
+                    <div class="popup7-text">
+                        <p class="window-name-text">Olesya's art</p>
+                    </div>
+                    <div class="popup7-close-button">
+                        <button class="close-button-button-only" id="close-razrab6-modal-btn">
+                            <img src="photos/popup-img/close-button.png" style="opacity: 0;" alt="close button">
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="img7">
+                    <p class="razrabotka-text">This app is currently in development. Please, check up later</p>
+
+                </div>
+            </div>
+
+        </div>
+    </div> --> 
+
+
+
+
+
+
+<!-- модальное окно почта -->
+    <div class="modal" id="mail-modal">
+        <div class="modal-box"> <!-- модальноеокно-->
+            <div class="popup7">
+                <div class="header-popup7">
+                    <div class="popup7-logo">
+                        <img src="photos/popup-img/mail-logo.png" alt="our photo" screet>
+                    </div>
+                    <div class="popup7-text">
+                        <p class="window-name-text">mail.exe</p>
+                    </div>
+                    <div class="popup7-close-button">
+                        <button class="close-button-button-only" id="close-mail-btn">
+                            <img src="photos/popup-img/close-button.png" style="opacity: 0;">
+                        </button>
+                    </div>
+
+                </div>
                     
+                <div class="whole-mail">
+                    <div class="to-mail"></div>
+                    <div class="subject-mail"></div>
+                    <div class="text-mail"></div>
+                </div>
+                
             </div>
+
         </div>
+    </div>
 
 
 
+    <script defer src="js/index.js"></script>
 
 
 
-         <!-- пусковая панель -->
-        <div class="taskbar">
-            <div class="start">
-                <div>
-                    <img class="start-img" src="photos/other-pics-homescreen/start.png" alt="start image">
-                </div>
-                <div>
-                    <p class="start-text">Start</p>
-                </div>
-            </div>
-            <div class="empty-taskbar"></div>
-            <div class="date-and-time">
-                <div class="year">
-                    <p class="date-and-time-text">2024</p>
-                </div>
-                <div class="time">
-                    <p class="date-and-time-text">08:50AM</p>
-                </div>
-            </div>
-        </div>
+</body>
 
-
-    </body>
 </html>
