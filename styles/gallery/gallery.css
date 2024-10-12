@@ -173,6 +173,7 @@ body {
     display: flex;
     /* position: relative; */
     justify-content: center;
+    z-index: -1;
 
 }
 
@@ -183,6 +184,6 @@ body {
     width: 73px;
 }
 
-/* .left-button:active{
-    width: 70px;
-} */
+.big-photo-div{
+    z-index: -1;
+}
