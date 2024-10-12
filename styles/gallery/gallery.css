@@ -175,3 +175,14 @@ body {
     justify-content: center;
 
 }
+
+.button-big-img:hover{
+    cursor: pointer;
+}
+.button-big-img:active{
+    width: 73px;
+}
+
+/* .left-button:active{
+    width: 70px;
+} */
