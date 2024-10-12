@@ -37,9 +37,9 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     sendButton.addEventListener('click', function() {
-        this.src = 'send2.png';
+        this.src = 'photos/popup-img/send2.png';
         setTimeout(() => {
-            this.src = 'send3.png';
+            this.src = 'photos/popup-img/send3.png';
         }, 2000);
     });
 });
