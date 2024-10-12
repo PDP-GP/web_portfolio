@@ -101,7 +101,6 @@
 .close-button-image{
     width: 36px;
     height: 31px;
-    /* background-color: white; */
     background-image: url('../../photos/popup-img/close-button.png');
     
     border: none;
@@ -119,8 +118,6 @@
 .mail-and-number{
     display: flex;
     flex-direction: row;
-    /* margin-left: 20px;
-    margin-right: 12px; */
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 5px;

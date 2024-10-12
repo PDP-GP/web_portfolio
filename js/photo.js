@@ -1,6 +1,5 @@
 
 
-
 document.addEventListener('DOMContentLoaded', function () {
     function updateTime() {
         const now = new Date();
